@@ -121,6 +121,6 @@ for k in ['one','two','three']:
 for k in ['one', 'two','three']:
 	try:
 		data_1[k][-1] = "a"
-		print(data_1[k][-1])
+		print(data_1[k][-1])			#tuple 변경 불가 , 리스트 : a , 딕셔너리 key value
 	except TypeError :
 		print("error")
