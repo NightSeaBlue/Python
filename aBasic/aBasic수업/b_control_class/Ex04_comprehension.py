@@ -36,17 +36,49 @@ print(alist)
 
 
 #------------------------------------------------
-# 리스트 컨프리핸션
+# 리스트 컨프리핸션     #list 안에 반복문을 넣어서 list 요소 자동 지정 가능 , 반복문 에 연산 및 조건도 할당가능
+blist=[n for n in range(1,7)]
+print(blist)
 
+blist=[n**2 for n in range(1,7)]
+print(blist)
 
+blist=[n for n in range(1,7) if n%2==1]
+print(blist)
+
+# 컨프리핸션 아닌 코드를 컨프리핸션으로 변경
+clist=[]
+for r in range(1,4):
+    for c in range(1,3):
+        clist.append((r,c))
+print(clist)
+
+dlist=[(r,c) for r in range(1,4) for c in range(1,3)]
+print(dlist)
+
+print('-'*200)
 #-------------------------------------------
-# 딕셔러니 컨프리핸션
+# 딕셔너리 컨프리핸션
+data =(2,3,4)
+adic={n:n**2 for n in data}
+print(adic)
+
+word = 'LOVE LOL'
+wcnt ={letter : word.count(letter) for letter in set(word)}
+print(set(word))
+print(wcnt)
 
 
 
 #------------------------------------------------
 # 셋 컨프리핸션
+data=(1,2,3,2,1,4,5)
+alist=[n for n in data]
+print(alist)
 
+data=(1,2,3,2,1,4,5)
+bset={n for n in data}
+print(bset)
 
 
 
@@ -79,10 +111,10 @@ print(result)
 
 # -------------------------------------------------
 # 프로젝트할 때 팀구호
-#우리의결의= """취하고싶으면달려라
-#맡은업무는반드시마치자
-#노력없는성과는없다
-#구글신과함께공부하자
-#"""
-#result = [ j[i*2] for i, j in enumerate(우리의결의.split('\n')]
-#print(result)
+우리의결의= """취하고싶으면달려라
+맡은업무는반드시마치자
+노력없는성과는없다
+구글신과함께공부하자
+"""
+result = [ j[i*2] for i, j in enumerate(우리의결의.splitlines())]
+print(result)

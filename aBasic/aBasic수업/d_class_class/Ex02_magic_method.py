@@ -1,3 +1,25 @@
+class Sample:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    # 필요한 매직메소드를 추가
+    def __str__(self):  # 자기 자신이 인자로 들어오기 때문에, 변수를 활용하고자 하면 self 를 붙여서 불러라
+        return '이름:{}, 나이:{}'.format(self.name,self.age)
+    def __add__(self, other):
+        self.age+=other
+    def __ge__(self, other):
+        if self.age>=other:
+            return '성인'
+        else:
+            return '미성년'
+
+s=Sample("누구세요",12)
+print(s)
+print(s>=20)
+s+10
+print(s)
+print(s>=20)
+
 """
     매직 메소드
 

@@ -23,5 +23,10 @@ def get_weather():
     return choice(today)
 
 def get_date():
-    today = ['월','화','수','목','금','토','일ㄴ']
+    today = ['월','화','수','목','금','토','일']
     return choice(today)
+
+# import 시 얘네가 실행되지 않도록 막아야 함 (특정 조건이 걸려야만 실행하게끔)
+if __name__ == '__main__':
+    print(get_weather())
+    print(get_date())
