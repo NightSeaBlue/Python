@@ -20,7 +20,7 @@ def print_menu():
     menu=input('메뉴선택:')
     return int(menu)
 
-def set_contact():
+def set_contact():                                                 # input 을 통해 입력받은 인자들을 Contact 객체를 생성해 리턴함
    name=input("이름")
    phone_number = input("전화번호")
    email = input("이메일")
@@ -32,8 +32,8 @@ def set_contact():
 
 
 
-def print_contact(contact_list):
-    for contact in contact_list:
+def print_contact(contact_list):        #contact_list 를 인자로 전달받음
+    for contact in contact_list:        #contact_list 의 contact 각각을 print_info() 함수를 통해 인자를 출력함
         contact.print_info()
     return
 
