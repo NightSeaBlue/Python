@@ -7,11 +7,11 @@
 """
 def count_words(filename):
     try:
-        with open('./data/'+filename,'r',encoding='utf-8') as f:
+        with open('./data/'+filename,'r',encoding='utf-8') as f:        #file open 을 close 자동으로 하기 위해  with 을 사용함
             content=f.read()
             words=content.split()
             print(len(words))
-    except FileNotFoundError as e:
+    except FileNotFoundError as e:                                      # File 을 찾지 못하는 에러 발생시
         pass
 
 # 존재하지 않는 파일명도 있음

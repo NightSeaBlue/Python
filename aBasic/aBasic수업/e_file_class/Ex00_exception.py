@@ -32,7 +32,7 @@ except Exception:
 # (3)
 try:
      10/0
-except Exception as e:  #Exception 의 예외는 e
+except Exception as e:  #Exception(예외) 는 별칭을 줘서 활용할 수 있음
     print("예외:", e)
 else:                   #예외 미 발생시 실행
     print('예외가 없는 경우')

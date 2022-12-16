@@ -9,8 +9,8 @@ data=[[1,'김','책임연구원'],[2,'박','선임연구원'],[3,'이','연구�
 import csv
 with open('./data/imsi.csv','wt',encoding='utf-8-sig') as f:
     #f.write()
-    cout=csv.writer(f)
-    cout.writerows(data)
+    cout=csv.writer(f)                                      # csv Writer : csv 형태의 파일을 생성함
+    cout.writerows(data)                                    # 한 행씩 데이터를 csv 파일에 입력
 
 result=[]
 with open('./data/imsi.csv','rt',encoding='utf-8-sig') as f:
